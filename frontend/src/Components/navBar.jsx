@@ -6,7 +6,6 @@ import { toast } from "react-toastify";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const token = useSelector((store) => store.AuthReducer.token);
   const isAuth = useSelector((store) => store.AuthReducer.isAuth);
   const dispatch = useDispatch();
 
@@ -32,8 +31,6 @@ const Navbar = () => {
             </div>
             <div className="hidden md:block">
               <div className="flex items-center space-x-4">
-               
-                
                 {isAuth ? (
                   <button
                     onClick={handlelogOut}
@@ -111,7 +108,7 @@ const Navbar = () => {
               >
                 Home
               </Link>
-             
+
               {isAuth ? (
                 <button
                   onClick={handlelogOut}

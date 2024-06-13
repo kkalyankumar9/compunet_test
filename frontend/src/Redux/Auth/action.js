@@ -12,7 +12,7 @@ import {
 export const register = (signup_data) => async (dispatch) => {
   dispatch({ type: SIGNUP_REQUEST });
   try {
-    const res = await fetch("https://spack-solutions.onrender.com/userauth/registration", {
+    const res = await fetch("https://compunet-test.onrender.com/userauth/registration", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -32,7 +32,7 @@ export const register = (signup_data) => async (dispatch) => {
 export const logIn = (signin_data) => async (dispatch) => {
   dispatch({ type: SIGNIN_REQUEST });
   try {
-    const res = await fetch("https://spack-solutions.onrender.com/userauth/login", {
+    const res = await fetch("https://compunet-test.onrender.com/userauth/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -55,7 +55,7 @@ export const logoutUser = () => async (dispatch) => {
   console.log("Token before logout:", token);
   dispatch({ type: LOGOUT_REQUEST });
   try {
-    await fetch("https://spack-solutions.onrender.com/userauth/logout", {
+    await fetch("https://compunet-test.onrender.com/userauth/logout", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

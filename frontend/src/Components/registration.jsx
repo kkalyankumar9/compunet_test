@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -102,8 +102,8 @@ const Registration = () => {
     try {
       const response = await dispatch(register(user));
 
-      if (response.msg === "User Register successfully") {
-        navigate("/");
+      if (response.msg === "User registration successfully") {
+        navigate("/login");
         toast.success("Register Successful");
       } else {
         const errorMessage = response.msg;
